@@ -8,16 +8,12 @@ def test_clicking_menu_items(incognito_hw):
     wait = WebDriverWait(incognito_hw, 10)
     menu_item_1 = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, 'Home')))
     menu_item_1.click()
-    time.sleep(1)
     menu_item_2 = incognito_hw.find_element(By.LINK_TEXT, 'News')
     menu_item_2.click()
-    time.sleep(1)
     menu_item_3 = incognito_hw.find_element(By.LINK_TEXT, 'Contact')
     menu_item_3.click()
-    time.sleep(1)
     menu_item_4 = incognito_hw.find_element(By.LINK_TEXT, 'About')
     menu_item_4.click()
-    time.sleep(1)
 
 
 def test_right_page(headless_hw):
